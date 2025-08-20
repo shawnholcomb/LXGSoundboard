@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#000000">
+
+    <title>LXG Soundboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="content/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    <style>
+        body {
+            color: #fff;
+            background-color: #1d1d1d;
+        }
+
+        .container {
+            height: 100vh;
+            padding: 10px 0;
+        }
+
+        #title {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 80px;
+            padding: 5px 0 0 19px;
+        }
+
+        #soundboardImg {
+            width: 230px;
+            height: 40px;
+            opacity: 0.85;
+        }
+
+        button {
+            font-family: "Lexend Deca", sans-serif;
+        }
+
+        .buttonBank {
+            display: flex;
+        }
+
+        .buttonBank div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background: url("content/images/buttonbg.jpg");
+            border: 3px inset rgba(70, 69, 77, 0.9);
+            height: 145px;
+            width: 145px;
+            border-radius: 10px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .greenButton:active {
+            background: url("content/images/greenbuttonbg.jpg");
+            box-shadow: 0 0 35px rgba(43, 245, 37, 0.6);
+        }
+
+        .blueButton:active {
+            background: url("content/images/bluebuttonbg.jpg");
+            box-shadow: 0 0 35px rgba(50, 119, 230, 0.6);
+        }
+
+        .purpleButton:active {
+            background: url("content/images/purplebuttonbg.jpg");
+            background-size: 100% 100%;
+            box-shadow: 0 0 35px rgba(175, 137, 255, 0.6);
+        }
+
+        .redButton:active {
+            background: url("content/images/redbuttonbg.jpg");
+            box-shadow: 0 0 35px rgba(240, 56, 54, 0.6);
+        }
+
+        .yellowButton:active {
+            background: url("content/images/yellowbuttonbg.jpg");
+            box-shadow: 0 0 35px rgba(247, 237, 123, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row no-gutters mb-3" id="title">
+            <img id="soundboardImg" src="content/images/sounboardlogo.png" onclick="btnChrome_onclick()">
+        </div>
+
+        <div class="row row-cols-md-5 row-cols-sm-6 no-gutters buttonBank">
+
+
+            <div class="col">
+                <button class="blueButton" id="Airhorn" onClick="play_sound(this.id)">Airhorn</button>
+            </div>
+            <div class="col">
+                <button class="purpleButton" id="applause" onClick="play_sound(this.id)">Applause</button>
+            </div>
+            <div class="col">
+                <button class="greenButton" id="braaam" onClick="play_sound(this.id)">Braaam</button>
+            </div>
+            <div class="col">
+                <button class="yellowButton" id="sadviolin" onClick="play_sound(this.id)">Sad Violin</button>
+            </div>
+            <div class="col">
+                <button class="redButton" id="oohwee" onClick="play_sound(this.id)">Ooh Wee</button>
+            </div>
+
+
+            <div class="col">
+                <button class="blueButton" id="deedit" onClick="play_sound(this.id)">I Deed It</button>
+            </div>
+            <div class="col">
+                <button class="purpleButton" id="tellmewhonext" onClick="play_sound(this.id)">Tell Me Who Next</button>
+            </div>
+            <div class="col">
+                <button class="greenButton" id="hagay" onClick="play_sound(this.id)">Ha, Gay!</button>
+            </div>
+            <div class="col">
+                <button class="yellowButton" id="dinthap" onClick="play_sound(this.id)">D In The P, I'm Winning</button>
+            </div>
+            <div class="col">
+                <button class="redButton" id="yerp" onClick="play_sound(this.id)">Yerp</button>
+            </div>
+
+
+            <div class="col">
+                <button class="blueButton" id="myqb" onClick="play_sound(this.id)">That's My QB</button>
+            </div>
+            <div class="col">
+                <button class="purpleButton" id="buysomestuff" onClick="play_sound(this.id)">I Wanna Buy Some
+                    Stuff</button>
+            </div>
+            <div class="col">
+                <button class="greenButton" id="endracism" onClick="play_sound(this.id)">Shoutout To His Family</button>
+            </div>
+            <div class="col">
+                <button class="yellowButton" id="whippedcreamvodka" onClick="play_sound(this.id)">Whipped Cream
+                    Vodka</button>
+            </div>
+            <div class="col">
+                <button class="redButton" id="ojmixer" onClick="play_sound(this.id)">OJ Mixer</button>
+            </div>
+
+
+            <div class="col">
+                <button class="blueButton" id="bootycheeks" onClick="play_sound(this.id)">Bouncing Off My Booty
+                    Cheeks</button>
+            </div>
+            <div class="col">
+                <button class="purpleButton" id="bussy" onClick="play_sound(this.id)">Kisses On My Bussy</button>
+            </div>
+            <div class="col">
+                <button class="greenButton" id="ifyb" onClick="play_sound(this.id)">IFYB</button>
+            </div>
+            <div class="col">
+                <button class="yellowButton" id="hoe" onClick="play_sound(this.id)">You's A Hoe</button>
+            </div>
+            <div class="col">
+                <button class="redButton" id="church" onClick="play_sound(this.id)">Go To Church</button>
+            </div>
+
+
+            <div class="col">
+                <button class="blueButton" id="youscared" onClick="play_sound(this.id)">You Scared</button>
+            </div>
+            <div class="col">
+                <button class="purpleButton" id="natedogg" onClick="play_sound(this.id)">Nate Dogg - Heeey</button>
+            </div>
+            <div class="col">
+                <button class="greenButton" id="smokeweed" onClick="play_sound(this.id)">Smoke Weed Every Day</button>
+            </div>
+            <div class="col">
+                <button class="yellowButton" id="outsideoftheclub" onClick="play_sound(this.id)">Outside Of The
+                    Club</button>
+            </div>
+            <div class="col">
+                <button class="redButton" id="neverscared" onClick="play_sound(this.id)">Never Scared</button>
+            </div>
+
+
+            <div class="col">
+                <button class="blueButton" id="jusnutted" onClick="play_sound(this.id)">I Just Nutted</button>
+            </div>
+            <!-- <div class="col">
+                <button class="purpleButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="greenButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="yellowButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="redButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+
+
+            <!-- <div class="col">
+                <button class="blueButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="purpleButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="greenButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="yellowButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+            <!-- <div class="col">
+                <button class="redButton" id="" onClick="play_sound(this.id)"></button>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script>
+        function play_sound(clicked_id) {
+            let audio = new Audio(`content/audio/${clicked_id}.mp3`);
+            audio.play();
+        }
+
+        function btnChrome_onclick() {
+            document.documentElement.webkitRequestFullScreen();
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
